@@ -41,3 +41,13 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 - `navigator.vibrate` can vibrate phones
 - `scrollTo` can scroll to a section of a page
+
+### 16: Debugging
+
+- `console.count` will count how many times a function has run
+
+## Module 3: The Tricky Bits
+
+### 17: Scope
+
+
