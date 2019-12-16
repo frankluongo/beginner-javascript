@@ -50,4 +50,195 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 17: Scope
 
+### 18: Hoisting
 
+### 19: Closure
+
+- Closure is accessing parent level scope from a child scope even after the parent function is dead
+- You have to return the child function in order to access the parent functions variables
+
+## Module 4: The DOM — Working With HTML & CSS
+
+### 20: Intro to the DOM
+
+- Navigator gives you information about the device
+- Window gives you information about the browser
+- Document is everything from the opening HTML tag to the closing one
+
+### 21: Selecting Elements
+
+- Use `document.querySelector` and `document.querySelectorAll`
+
+### 22: Element Properties & Methods
+
+- Use `console.dir` on an element to get the available methods and properties
+- Use `.textContent` to get an element's text content
+- Use `.insertAdjacentText` to add text to an element
+
+### 23: Working with Classes
+
+- JavaScript has ClassList methods, `.add`, `.remove`, `.toggle`, `.contains`
+
+### 24: Built in and Custom Data Attributes
+
+- Attributes refer to the additional info on an element
+- Some are just getters like `.naturalWidth`
+
+#### 24.1 How to get Natural Width to work
+
+```js
+  window.addEventListener('load', function() {
+    console.log(element.naturalWidth);
+  });
+  // OR
+  element.addEventListener('load', function() {
+    console.log(element.naturalWidth);
+  });
+```
+
+- Use `data-` for custom attributes
+- To get data on an object, use `.dataset`
+
+### 25: Creating HTML
+
+### 26: HTML from Strings and XSS
+
+### 27: Traversing and Removing Nodes
+
+### 28: CARDIO
+
+## Module 5: Events
+
+### 29: Event Listener
+
+### 30: Targets, Bubbling, Propagation & Capture
+
+### 31: Prevent Default & Form Events
+
+### 32: Accessibility Gotchas & Keyboard Codes
+
+## Module 6: Serious Practice Exercises
+
+### 33: Etch-a-Sketch
+
+### 34: Click Outside Modal
+
+### 35: Scroll Events & Intersection Observer
+
+### 36: Tabs
+
+## Module 7: Logic & Flow Control
+
+### 37: BEDMAS
+
+### 38: If Statements, Function Returns, Truthy & Falsy
+
+### 39: Coercion, Ternaries, and Conditional Abuse
+
+### 40: Case Switching & Animating a Turtle with CSS Variables
+
+### 41: Intervals & Timers
+
+## Module 8: Data Types
+
+### 42: Objects
+
+### 43: Object Reference vs Values
+
+### 44: Maps
+
+### 45: Arrays
+
+### 46: Array Cardio - Static Methods
+
+### 47: Array Cardio - Instance Methods
+
+### 48: Array Cardio - Callback Methods & Function Generation
+
+## Module 9: Gettin' Loopy
+
+### 49: Looping & Iterating - Array .forEach
+
+### 50: Looping & Iterating - Mapping
+
+### 51: Looping & Iterating - Filter, Find & Higher Order Functions
+
+### 52: Looping & Iterating - Reduce
+
+### 53: Looping & Iterating - Reduce Exercise
+
+### 54: Looping & Iterating - For, For in, Of & While Loops
+
+## Module 10: Harder Practice Exercises
+
+### 55: Face Detection & Censorship
+
+### 56: Sarcastic Text Generator
+
+### 57: Shopping Form with Custom Events, Delegation & LocalStorage
+
+### 58: Building a Gallery Exercise
+
+### 59: Building a Slider
+
+## Module 11: Prototypes, `This`, `new` and Inheritance
+
+### 60: The New Keyword
+
+### 61: The This Keyword
+
+### 62: Prototype Refactor of The Gallery Exercise
+
+### 63: Prototypes & Prototypal Inheritance
+
+### 64: Prototype Refactor of The Slider Exercise
+
+### 65: Bind, Call & Apply
+
+## Module 12: Advanced Flow Control
+
+### 66: The Event Loop & Callback Hell
+
+### 67: Promises
+
+### 68: Promises - Error Handling
+
+### 69: Refactoring Callback Hell to Promise Land
+
+### 70: Async Await
+
+### 71: Async Await Error Handling
+
+### 72: Async Await Prompt UI
+
+### 73: Async Typer UI - 2 Options
+
+## Module 13: AJAX & Fetching
+
+### 74: Ajax & API's
+
+### 75: CORS & Recipes
+
+### 76: Dad Jokes
+
+### 77: Currency Converter
+
+## Module 14: ES Modules & Structuring Larger Apps
+
+### 78: Modules
+
+### 79: Currency modules Refactor
+
+### 80: Dad Jokes Modules Refactor
+
+### 81: Bundling & Building with Parcel
+
+### 82: Using Open Source NPM Packages
+
+### 83: Security
+
+## Module 15: Final Round of Exercises
+
+### 84: Web Speech Colours Game
+
+### 85: Audio Visualization
