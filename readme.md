@@ -50,4 +50,21 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 17: Scope
 
+## TEMPORARY NOTES
 
+### Section 25
+
+- Use `document.body` to append to the body of the page
+- Use `.insertAdjacentElement` to add element next to another
+- Also, `.cloneNode()` is good for cloning elements
+
+### Section 26
+
+- We can create elements using `document.createRange().createContextualFragment(markup)` and filling it in with text that will be converted to HTML that can be read by the browser
+
+### Section 27
+
+- `.children` are only elements while `.childNodes` are elements and text
+- The method you want to use is going to depend on whether you're starting with an element or a node and whether you're trying to interact with an element or a node
+
+Up next I'll be doing DOM Cardio
