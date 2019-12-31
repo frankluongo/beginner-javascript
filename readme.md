@@ -66,5 +66,3 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 - `.children` are only elements while `.childNodes` are elements and text
 - The method you want to use is going to depend on whether you're starting with an element or a node and whether you're trying to interact with an element or a node
-
-Up next I'll be doing DOM Cardio
