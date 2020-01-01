@@ -84,3 +84,5 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 - Buttons and links should not be mixed up
 - Use `role="button"` and `tabindex="0"` to ensure things are focusable
 - `keycode.info` is the best website
+
+Resume 33 at 13:47
