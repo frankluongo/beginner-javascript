@@ -69,4 +69,18 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### Section 29: Event Listeners
 
-Up next: Section 30
+### Section 30: The Event Object
+
+- `event.currentTarget` is the thing that fired the event listener, so if you have a button with a nested element, the `currentTarget` will reference the button and not anything inside it
+- `event.stopPropagation` will stop your event from bubbling up
+- You can set events to listen at the capture or bubbling phase using the `{ capture: boolean }` option
+
+### Section 31: Prevent Default / Forms
+
+- Use Preserve log to preserve things that happen in the console!!!
+
+### Section 32: Accessibility Gotchas & Keyboard Codes
+
+- Buttons and links should not be mixed up
+- Use `role="button"` and `tabindex="0"` to ensure things are focusable
+- `keycode.info` is the best website
