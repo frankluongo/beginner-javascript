@@ -1,7 +1,13 @@
 class EtchASketch {
   constructor() {
+    this.coords = {
+      x: this.generateRandomValue(this.width),
+      y: this.generateRandomValue(this.height)
+    };
+    this.hue = 0;
     this.setCanvasContextSettings();
     this.setInitialDotLocation();
+    this.listenForKeydown();
   }
   // Select Elements on The Page & Get Our Variables
   get canvas() {
@@ -22,32 +28,102 @@ class EtchASketch {
     return this.canvas.height;
   }
 
+  get MOVE_AMOUNT() {
+    return 10;
+  }
+
   // Setup our Canvas For Drawing
   setCanvasContextSettings() {
     this.ctx.lineJoin = "round";
     this.ctx.lineCap = "round";
-    this.ctx.lineWidth = 10;
+    this.ctx.lineWidth = this.MOVE_AMOUNT;
   }
 
   setInitialDotLocation() {
-    const { ctx, width, height } = this;
-    ctx.beginPath();
-    ctx.moveTo(200, 200);
-    ctx.lineTo(200, 200);
-    ctx.stroke();
+    const { coords, ctx, hue, setPathDetails } = this;
+    setPathDetails({
+      ctx,
+      startX: coords.x,
+      startY: coords.y,
+      endX: coords.x,
+      endY: coords.y,
+      hue
+    });
+  }
+  //
+  // Write a Draw Function
+  //
+
+  draw({ key }) {
+    const { coords, ctx, setPathDetails, MOVE_AMOUNT } = this;
+    // Start the path
+    this.hue += 1;
+    const startX = coords.x;
+    const startY = coords.y;
+    // Move our x and y values depending on the user's actions
+    switch (key) {
+      case "ArrowUp":
+        coords.y -= MOVE_AMOUNT;
+        break;
+      case "ArrowDown":
+        coords.y += MOVE_AMOUNT;
+        break;
+      case "ArrowLeft":
+        coords.x -= MOVE_AMOUNT;
+        break;
+      case "ArrowRight":
+        coords.x += MOVE_AMOUNT;
+        break;
+      default:
+        break;
+    }
+    setPathDetails({
+      ctx,
+      startX,
+      startY,
+      endX: coords.x,
+      endY: coords.y,
+      hue: this.hue
+    });
   }
 
-  // Helpers
+  //
+  // Write a Handler For The Keys
+  //
 
-  generateRandomValue() {}
+  handleKey(event) {
+    if (event.key.includes("Arrow")) {
+      event.preventDefault();
+      this.draw({
+        key: event.key
+      });
+    }
+  }
+
+  //
+  // Listen For Arrow Keys
+  //
+
+  listenForKeydown() {
+    window.addEventListener("keydown", this.handleKey.bind(this));
+  }
+
+  //
+  // Helpers
+  //
+  generateRandomValue(boundary) {
+    return Math.floor(Math.random() * boundary);
+  }
+
+  setPathDetails({ ctx, hue, startX, startY, endX, endY }) {
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(endX, endY);
+    ctx.stroke();
+  }
 }
 
 new EtchASketch();
 
-// Write a Draw Function
-
-// Write a Handler For The Keys
-
 // Clear / Shake Function
-
-// Listen For Arrow Keys
