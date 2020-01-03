@@ -8,6 +8,7 @@ class EtchASketch {
     this.setCanvasContextSettings();
     this.setInitialDotLocation();
     this.listenForKeydown();
+    this.listenForShakeButtonClicks();
   }
   // Select Elements on The Page & Get Our Variables
   get canvas() {
@@ -32,7 +33,9 @@ class EtchASketch {
     return 10;
   }
 
+  //
   // Setup our Canvas For Drawing
+  //
   setCanvasContextSettings() {
     this.ctx.lineJoin = "round";
     this.ctx.lineCap = "round";
@@ -109,6 +112,42 @@ class EtchASketch {
   }
 
   //
+  // Listen for Button Clicks
+  //
+
+  listenForShakeButtonClicks() {
+    this.shakeButton.addEventListener("click", this.clearCanvas.bind(this));
+  }
+
+  //
+  // Clear / Shake Function
+  //
+
+  clearCanvas() {
+    this.clearCanvasAppearance();
+    this.shakeCanvas();
+  }
+
+  //
+  // Clear Canvas Styling
+  //
+
+  shakeCanvas() {
+    this.canvas.classList.add("shake");
+    this.canvas.addEventListener(
+      "animationend",
+      () => {
+        this.canvas.classList.remove("shake");
+      },
+      { once: true }
+    );
+  }
+
+  clearCanvasAppearance() {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+  }
+
+  //
   // Helpers
   //
   generateRandomValue(boundary) {
@@ -125,5 +164,3 @@ class EtchASketch {
 }
 
 new EtchASketch();
-
-// Clear / Shake Function
