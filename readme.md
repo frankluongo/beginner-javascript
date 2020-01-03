@@ -85,4 +85,10 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 - Use `role="button"` and `tabindex="0"` to ensure things are focusable
 - `keycode.info` is the best website
 
-Resume 33 at 37:30
+### Section 34: Click Outside Modal
+
+- Use `.closest` to find the thing you want the user to click
+
+### Section 35: Scroll to accept
+
+- Here we use the Intersection Observer, which consists of instantiating the observer with a callback function and some options, telling it to observe something and then doing things with that action
