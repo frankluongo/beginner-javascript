@@ -50,8 +50,6 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 17: Scope
 
-<<<<<<< HEAD
-
 ### 18: Hoisting
 
 ### 19: Closure
@@ -116,7 +114,7 @@ element.addEventListener("load", function() {
 - `.children` are only elements while `.childNodes` are elements and text
 - The method you want to use is going to depend on whether you're starting with an element or a node and whether you're trying to interact with an element or a node
 
-### 28: CARDIO
+### 28: DOM CARDIO
 
 ## Module 5: Events
 
@@ -154,13 +152,23 @@ element.addEventListener("load", function() {
 
 ### 36: Tabs
 
+- This was done in a JS File in the repo
+
 ## Module 7: Logic & Flow Control
 
 ### 37: BEDMAS
 
+- BEDMAS = Brackets, exponents, division, mulitiplication, addition, subtraction is the order of operations in JavaScript
+
 ### 38: If Statements, Function Returns, Truthy & Falsy
 
+- Once an `if` statement finds a true condition, it stops
+- Try to keep logic out of if statements
+- Truthy values are things like empty or fill in strings
+
 ### 39: Coercion, Ternaries, and Conditional Abuse
+
+- This video is up next
 
 ### 40: Case Switching & Animating a Turtle with CSS Variables
 
