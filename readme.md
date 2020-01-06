@@ -50,6 +50,8 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 17: Scope
 
+<<<<<<< HEAD
+
 ### 18: Hoisting
 
 ### 19: Closure
@@ -87,13 +89,13 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 #### 24.1 How to get Natural Width to work
 
 ```js
-  window.addEventListener('load', function() {
-    console.log(element.naturalWidth);
-  });
-  // OR
-  element.addEventListener('load', function() {
-    console.log(element.naturalWidth);
-  });
+window.addEventListener("load", function() {
+  console.log(element.naturalWidth);
+});
+// OR
+element.addEventListener("load", function() {
+  console.log(element.naturalWidth);
+});
 ```
 
 - Use `data-` for custom attributes
@@ -101,9 +103,18 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 25: Creating HTML
 
+- Use `document.body` to append to the body of the page
+- Use `.insertAdjacentElement` to add element next to another
+- Also, `.cloneNode()` is good for cloning elements
+
 ### 26: HTML from Strings and XSS
 
+- We can create elements using `document.createRange().createContextualFragment(markup)` and filling it in with text that will be converted to HTML that can be read by the browser
+
 ### 27: Traversing and Removing Nodes
+
+- `.children` are only elements while `.childNodes` are elements and text
+- The method you want to use is going to depend on whether you're starting with an element or a node and whether you're trying to interact with an element or a node
 
 ### 28: CARDIO
 
@@ -111,11 +122,23 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 29: Event Listener
 
+- use `{once: true}` on event listeners to call it and remove it in one shot
+
 ### 30: Targets, Bubbling, Propagation & Capture
+
+- `event.currentTarget` is the thing that fired the event listener, so if you have a button with a nested element, the `currentTarget` will reference the button and not anything inside it
+- `event.stopPropagation` will stop your event from bubbling up
+- You can set events to listen at the capture or bubbling phase using the `{ capture: boolean }` option
 
 ### 31: Prevent Default & Form Events
 
+- Use Preserve log to preserve things that happen in the console!!!
+
 ### 32: Accessibility Gotchas & Keyboard Codes
+
+- Buttons and links should not be mixed up
+- Use `role="button"` and `tabindex="0"` to ensure things are focusable
+- `keycode.info` is the best website
 
 ## Module 6: Serious Practice Exercises
 
@@ -123,7 +146,11 @@ These are the starter files and solutions to the [Beginner JavaScript](https://B
 
 ### 34: Click Outside Modal
 
+- Use `.closest` to find the thing you want the user to click
+
 ### 35: Scroll Events & Intersection Observer
+
+- Here we use the Intersection Observer, which consists of instantiating the observer with a callback function and some options, telling it to observe something and then doing things with that action
 
 ### 36: Tabs
 
