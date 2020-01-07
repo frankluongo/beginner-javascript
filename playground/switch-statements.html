@@ -10,7 +10,80 @@
 
 
 <body>
-  <img width="200" src="./turtle.png" alt="Turt" class="turt">
+  <style>
+    .turt {
+      position: relative;
+      --x: 0px;
+      --y: 0px;
+      --rotateY: 0deg;
+      --rotate: 0deg;
+      transform: translate3d(var(--x), var(--y), 0) rotateY(var(--rotateY)) rotate(var(--rotate));
+      transition: transform 0.2s;
+    }
+  </style>
+  <img data-js="turtle" width="200" src="./turtle.png" alt="Turt" class="turt">
+
+
+  <script>
+    class Turtle {
+      constructor() {
+        this.x = 0;
+        this.y = 0;
+        this.SPEED = 50;
+        this.flipped = false;
+        this.rotate = 0;
+
+        window.addEventListener('keydown', this.handleKeydown.bind(this))
+      }
+      get turtle() {
+        return document.querySelector('[data-js="turtle"]')
+      }
+      handleKeydown(event) {
+        if (!event.key.includes('Arrow')) {
+          return;
+        }
+
+
+        switch (event.key) {
+          case "ArrowUp":
+            this.y = this.y - 1;
+            this.upsideDown = false;
+            this.rotate = -90;
+            break;
+          case "ArrowRight":
+            this.x = this.x + 1;
+            this.flipped = false;
+            this.rotate = 0;
+            break;
+          case "ArrowDown":
+            this.y = this.y + 1;
+            this.upsideDown = true;
+            this.rotate = 90;
+            break;
+          case "ArrowLeft":
+            this.x = this.x - 1;
+            this.flipped = true;
+            this.rotate = 0;
+            break;
+          default:
+            break;
+        }
+        this.moveTurtle();
+      }
+
+      moveTurtle() {
+        this.turtle.setAttribute('style', `
+        --x: ${this.x * this.SPEED}px;
+        --y: ${this.y * this.SPEED}px;
+        --rotateY: ${this.flipped ? "180deg" : "0"};
+        --rotate: ${this.rotate}deg;
+        `
+        )
+      }
+    }
+
+    new Turtle();
+  </script>
 
 </body>
 

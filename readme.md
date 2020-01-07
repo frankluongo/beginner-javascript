@@ -168,15 +168,29 @@ element.addEventListener("load", function() {
 
 ### 39: Coercion, Ternaries, and Conditional Abuse
 
-- This video is up next
+- Coercision is forcing a non-boolean into a real boolean
+- Double bang will convert a value into it's boolean value
+- Don't forget the `&&` trick
+
+Blockless If Statement
+
+```javascript
+if (thing) runFunction();
+```
 
 ### 40: Case Switching & Animating a Turtle with CSS Variables
 
+- Built a turtle!
+
 ### 41: Intervals & Timers
+
+- When you use a timeout, javascript will keep going and come back to the timeout later
 
 ## Module 8: Data Types
 
 ### 42: Objects
+
+- This is up next!
 
 ### 43: Object Reference vs Values
 
