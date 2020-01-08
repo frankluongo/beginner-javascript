@@ -233,9 +233,10 @@ How to properly add to an array
   const updatedArray = [newValue, ...array]
 ```
 
-- Pick up at 16:47
-
 ### 46: Array Cardio - Static Methods
+
+- `.slice` returns a portion of an array and is immutable
+- `.splice` takes an item out of an array
 
 ### 47: Array Cardio - Instance Methods
 
