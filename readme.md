@@ -190,13 +190,50 @@ if (thing) runFunction();
 
 ### 42: Objects
 
-- This is up next!
+- Always use trailing commas
+- Use `Object.freeze(object)` to create an immutable object that locks down an object's properties
+- You can use `delete` to remove a property on an object
 
 ### 43: Object Reference vs Values
 
+- When you compare two objects, they usually will not be that same unless they are the exact same object
+- When you create a variable that references an object (`object2 = object1`), upating the reference (`object2`) will update the original object (`object1`)
+- If you pass an external object into a function, you can modify data that lives in that external object
+
+How to properly copy and object
+
+```javascript
+// Shallow Copy
+const objectCopy = { ...objectToCopy }
+// Deep Copy -- requires Lodash
+const deepObjectCopy = _.cloneDeep(objectToCopy)
+```
+
 ### 44: Maps
 
+- Maps are similar to objects
+- A Map's order is set in stone
+- A Map's key can be set to anything as well as the value
+- Use a map if you need to maintain the order of the items
+- Maps are for storing data
+- Maps can't have methods
+- If you need to send data, you have to put it in an object
+
+```javascript
+const map = new Map()
+```
+
 ### 45: Arrays
+
+How to properly add to an array
+
+```javascript
+  const updatedArray = [...array, newValue]
+  // OR
+  const updatedArray = [newValue, ...array]
+```
+
+- Pick up at 16:47
 
 ### 46: Array Cardio - Static Methods
 
