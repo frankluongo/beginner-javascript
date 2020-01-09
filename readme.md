@@ -240,17 +240,31 @@ How to properly add to an array
 
 ### 47: Array Cardio - Instance Methods
 
+- When you store an array with `.push` as a variable, it will return you the new length of the array for some reason
+
 ### 48: Array Cardio - Callback Methods & Function Generation
+
+- `.sort` turns items into strings and then sorts them, to sort numbers you need to create a callback function
 
 ## Module 9: Gettin' Loopy
 
 ### 49: Looping & Iterating - Array .forEach
 
+- Using `.forEach` you can get the item, index, and array as well as the `this`
+- Doesn't return anything
+
 ### 50: Looping & Iterating - Mapping
+
+- `.map` is for performing an action on data and returning it
 
 ### 51: Looping & Iterating - Filter, Find & Higher Order Functions
 
+- Skipped
+
 ### 52: Looping & Iterating - Reduce
+
+- The second argument in `.reduce` tells it where to start
+- Pick this up at 10:12
 
 ### 53: Looping & Iterating - Reduce Exercise
 
