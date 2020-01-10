@@ -264,15 +264,73 @@ How to properly add to an array
 ### 52: Looping & Iterating - Reduce
 
 - The second argument in `.reduce` tells it where to start
-- Pick this up at 10:12
 
 ### 53: Looping & Iterating - Reduce Exercise
 
 ### 54: Looping & Iterating - For, For in, Of & While Loops
 
+#### For
+
+- This is useful for looping through an array. Although `.forEach, .map and .reduce has replaced it` has pretty much replaced it.
+- The only real use for it is when you have to increment by a specific number at a time
+
+```javascript
+for(let i = 0; i <= 10;i++>) {
+  console.log(i);
+}
+```
+
+#### For of
+
+- Used for looping over iterables
+- Useful for emojis, sequencing data
+- Mostly useful for sequencing promises
+
+```javascript
+for(const letter of name) {
+  console.log(letter);
+}
+```
+
+#### For in
+
+- Returns the keys of an object
+- This does look into the prototype of an object
+
+```javascript
+for(const letter in name) {
+  console.log(letter);
+}
+```
+
+#### While & Do While Loop
+
+- Not super useful
+
+```javascript
+let cool = true;
+let i = 0;
+while(cool === true) {
+  console.log('You are cool);
+  i++;
+  if ( > 100) {
+    cool = false;
+  }
+}
+
+// Do While
+do {
+
+} while() {
+
+}
+```
+
 ## Module 10: Harder Practice Exercises
 
 ### 55: Face Detection & Censorship
+
+- Resume at 23:21
 
 ### 56: Sarcastic Text Generator
 
