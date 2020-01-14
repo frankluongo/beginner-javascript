@@ -330,9 +330,11 @@ do {
 
 ### 55: Face Detection & Censorship
 
-- Resume at 23:21
+- Finished!
 
 ### 56: Sarcastic Text Generator
+
+- Resume at 14:13
 
 ### 57: Shopping Form with Custom Events, Delegation & LocalStorage
 
