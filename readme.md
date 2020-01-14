@@ -272,7 +272,11 @@ How to properly add to an array
 
 ### 60: The New Keyword
 
+- The `new` keyword creates a new instance of an object
+
 ### 61: The This Keyword
+
+- Remember that arrow functions bind `this` to the parent object
 
 ### 62: Prototype Refactor of The Gallery Exercise
 
