@@ -334,9 +334,11 @@ do {
 
 ### 56: Sarcastic Text Generator
 
-- Resume at 14:13
+- Code in `exercises/56 - Sarcastic Text/text.js`
 
 ### 57: Shopping Form with Custom Events, Delegation & LocalStorage
+
+- Resume at 40:51
 
 ### 58: Building a Gallery Exercise
 
