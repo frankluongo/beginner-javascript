@@ -338,11 +338,15 @@ do {
 
 ### 57: Shopping Form with Custom Events, Delegation & LocalStorage
 
-- Resume at 40:51
+- Code in `exercises/57 - Shopping List/shopping.js`
 
 ### 58: Building a Gallery Exercise
 
+- Code in `exercises/58 - Gallery/gallery-V1.js`
+
 ### 59: Building a Slider
+
+- This is up next
 
 ## Module 11: Prototypes, `This`, `new` and Inheritance
 

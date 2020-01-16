@@ -12,7 +12,7 @@
 <body>
 
   <div class="galleries">
-    <div class="gallery gallery1">
+    <div class="gallery gallery1" data-ref="Gallery">
       <img src="./images/hondo.jpg" alt="Photo 1" tabindex="0" title="This is the title of the image"
         data-description="This is the description of the image">
 
@@ -50,7 +50,7 @@
 
     </div>
 
-    <div class="gallery gallery2">
+    <div class="gallery gallery2" data-ref="Gallery">
       <img src="./images/270-camo-sunset.jpg" alt="Photo 1" tabindex="0" title="This is the title of the image"
         data-description="This is the description of the image">
 
@@ -89,9 +89,9 @@
     </div>
 
 
-    <div class="modal">
+    <div class="modal" data-ref="Modal">
       <div class="modalInner">
-        <button aria-label="Previous Photo" class="prev">←</button>
+        <button aria-label="Previous Photo" class="prev" data-ref="Previous">←</button>
         <figure>
           <img src="./images/kith-hoodie.jpg">
           <figcaption>
@@ -102,12 +102,12 @@
               exercitationem!</p>
           </figcaption>
         </figure>
-        <button class="next" aria-label="Next Photo">→</button>
+        <button class="next" aria-label="Next Photo" data-ref="Next">→</button>
       </div>
     </div>
   </div>
 
-  <script src="./gallery-START.js"></script>
+  <script src="./gallery-V1.js"></script>
 </body>
 
 </html>
