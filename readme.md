@@ -204,9 +204,9 @@ How to properly copy and object
 
 ```javascript
 // Shallow Copy
-const objectCopy = { ...objectToCopy }
+const objectCopy = { ...objectToCopy };
 // Deep Copy -- requires Lodash
-const deepObjectCopy = _.cloneDeep(objectToCopy)
+const deepObjectCopy = _.cloneDeep(objectToCopy);
 ```
 
 ### 44: Maps
@@ -220,7 +220,7 @@ const deepObjectCopy = _.cloneDeep(objectToCopy)
 - If you need to send data, you have to put it in an object
 
 ```javascript
-const map = new Map()
+const map = new Map();
 ```
 
 ### 45: Arrays
@@ -228,9 +228,9 @@ const map = new Map()
 How to properly add to an array
 
 ```javascript
-  const updatedArray = [...array, newValue]
-  // OR
-  const updatedArray = [newValue, ...array]
+const updatedArray = [...array, newValue];
+// OR
+const updatedArray = [newValue, ...array];
 ```
 
 ### 46: Array Cardio - Static Methods
@@ -287,7 +287,7 @@ for(let i = 0; i <= 10;i++>) {
 - Mostly useful for sequencing promises
 
 ```javascript
-for(const letter of name) {
+for (const letter of name) {
   console.log(letter);
 }
 ```
@@ -298,7 +298,7 @@ for(const letter of name) {
 - This does look into the prototype of an object
 
 ```javascript
-for(const letter in name) {
+for (const letter in name) {
   console.log(letter);
 }
 ```
@@ -346,7 +346,7 @@ do {
 
 ### 59: Building a Slider
 
-- This is up next
+- Code in `exercises/59 - Slider/src/slider-v1.js`
 
 ## Module 11: Prototypes, `This`, `new` and Inheritance
 
@@ -360,9 +360,15 @@ do {
 
 ### 62: Prototype Refactor of The Gallery Exercise
 
+- Code in `exercises/58 - Gallery/gallery-v2-prototype.js`
+
 ### 63: Prototypes & Prototypal Inheritance
 
+- Add functions to the prototype so they can be shared by all instances of a Prototype
+
 ### 64: Prototype Refactor of The Slider Exercise
+
+- Code in `exercises/59 - Slider/src/gallery-v2-prototype.js`
 
 ### 65: Bind, Call & Apply
 
