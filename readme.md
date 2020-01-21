@@ -372,13 +372,33 @@ do {
 
 ### 65: Bind, Call & Apply
 
+#### .bind
+
+- `.bind` Will manually bind a function call to a particular thing you select
+- First thing passed to bind will be `this` and everything else will be the regular arguments
+
+#### .call
+
+- `.call` will do the same things as bind but then also call the function
+
+
+#### .apply
+
+- The only difference between `.call` and `.apply` is that apply requires an array of arguments
+
 ## Module 12: Advanced Flow Control
 
 ### 66: The Event Loop & Callback Hell
 
+- JavaScript is single threaded, so only one thing can run at a time
+
 ### 67: Promises
 
+- Code in `playground/promises.html`
+
 ### 68: Promises - Error Handling
+
+- Up next
 
 ### 69: Refactoring Callback Hell to Promise Land
 

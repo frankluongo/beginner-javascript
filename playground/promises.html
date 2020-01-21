@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promises</title>
+</head>
+
+<body>
+  <script>
+    function makePizza(toppings = []) {
+      return new Promise(function (resolve, reject) {
+        const amountOfTime = 500 + (toppings.length * 200);
+        // Wait one second
+        setTimeout(function () {
+          // When ready, resolve the promise
+          resolve(`Here is your 🍕 with ${toppings.join(', ')}`);
+        }, 1000);
+        // IF something goes wrong, reject it
+        // reject('No Pizza for you!')
+      });
+    }
+    //
+    // Sequential Promises
+    //
+    // makePizza(['pepperoni', 'chicken'])
+    //   .then(function (pizza) {
+    //     console.log(pizza);
+    //     return makePizza(['ham', 'pineapple']);
+    //   })
+    //   .then(function (newPizza) {
+    //     console.log(newPizza);
+    //   });
+    // pepperoniPizza.then(function (pizza) {
+    //   console.log('got it!')
+    //   console.log(pizza);
+    // });
+
+    //
+    // Concurrent Promises
+    //
+    const pizzaPromise1 = makePizza(['hot peppers', 'onion', 'feta']);
+    const pizzaPromise2 = makePizza(['hot peppers', 'onion', 'feta']);
+    const pizzaPromise3 = makePizza(['hot peppers', 'onion', 'feta']);
+
+    const dinnerPromise = Promise.all([
+      pizzaPromise1,
+      pizzaPromise2,
+      pizzaPromise3
+    ])
+
+    dinnerPromise.then(pizzas => {
+      console.log(pizzas)
+    })
+
+    const dinnerPromise1 = Promise.race([
+      pizzaPromise1,
+      pizzaPromise2,
+      pizzaPromise3
+    ])
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bind Call and Apply!</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <p>Hey</p>
+  <button>Click me</button>
+  <div class="wrapper">
+    <p>Hey im in a wrapper</p>
+  </div>
+  <script>
+    //
+    // Bind
+    //
+    const person = {
+      name: "Frank Luongo",
+      sayHi() {
+        return `Hey, ${this.name}`;
+      }
+    }
+
+    const jenna = { name: 'Jenna' }
+
+    const sayHi = person.sayHi.bind(jenna);
+
+    const $ = document.querySelector.bind(document);
+
+    // console.log($);
+    // console.log($('p'))
+
+    const bill = {
+      total: 1000,
+      calculate: function (taxRate) {
+        return this.total + (this.total * taxRate);
+      }
+    }
+
+    const total = bill.calculate(0.13);
+    // console.log(total);
+    const calc = bill.calculate.bind({ total: 500 }, 0.06);
+    // console.log(calc(0.13));
+
+    //
+    // Call & Apply
+    //
+
+    const total2 = bill.calculate.call({ total: 500 }, 0.06);
+    console.log(total2)
+
+    const total3 = bill.calculate.apply({ total: 500 }, [0.06]);
+    console.log(total3)
+  </script>
+</body>
+
+</html>
