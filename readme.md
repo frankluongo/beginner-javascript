@@ -398,13 +398,15 @@ do {
 
 ### 68: Promises - Error Handling
 
-- Up next
+- If you have a chain of promises, they will stop executing if there is an error
 
 ### 69: Refactoring Callback Hell to Promise Land
 
 ### 70: Async Await
 
 ### 71: Async Await Error Handling
+
+- Resume at 5:38
 
 ### 72: Async Await Prompt UI
 

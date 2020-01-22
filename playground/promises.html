@@ -12,6 +12,10 @@
   <script>
     function makePizza(toppings = []) {
       return new Promise(function (resolve, reject) {
+        // Reject if Pineapply
+        if (toppings.includes('pineapple')) {
+          reject('Seriously? No.')
+        }
         const amountOfTime = 500 + (toppings.length * 200);
         // Wait one second
         setTimeout(function () {
@@ -41,25 +45,50 @@
     //
     // Concurrent Promises
     //
-    const pizzaPromise1 = makePizza(['hot peppers', 'onion', 'feta']);
-    const pizzaPromise2 = makePizza(['hot peppers', 'onion', 'feta']);
-    const pizzaPromise3 = makePizza(['hot peppers', 'onion', 'feta']);
+    // const pizzaPromise1 = makePizza(['hot peppers', 'onion', 'feta']);
+    // const pizzaPromise2 = makePizza(['hot peppers', 'onion', 'feta']);
+    // const pizzaPromise3 = makePizza(['hot peppers', 'onion', 'feta']);
 
-    const dinnerPromise = Promise.all([
-      pizzaPromise1,
-      pizzaPromise2,
-      pizzaPromise3
-    ])
+    // const dinnerPromise = Promise.all([
+    //   pizzaPromise1,
+    //   pizzaPromise2,
+    //   pizzaPromise3
+    // ])
 
-    dinnerPromise.then(pizzas => {
-      console.log(pizzas)
+    // dinnerPromise.then(pizzas => {
+    //   console.log(pizzas)
+    // })
+
+    // const dinnerPromise1 = Promise.race([
+    //   pizzaPromise1,
+    //   pizzaPromise2,
+    //   pizzaPromise3
+    // ])
+
+    //
+    // Error Handling
+    //
+    makePizza(['cheese', 'pineapple'])
+      .then(pizza => {
+        console.log(pizza)
+      })
+      .catch(error => {
+        console.log('Oh No!')
+        console.log(error);
+      })
+
+    //
+    // Getting all the promises even if there are errors in some
+    //
+
+    const p1 = makePizza(['pep']);
+    const p2 = makePizza(['pineapple']);
+
+    const dinnerPromise2 = Promise.allSettled([p1, p2]);
+
+    dinnerPromise2.then(results => {
+      console.log(results);
     })
-
-    const dinnerPromise1 = Promise.race([
-      pizzaPromise1,
-      pizzaPromise2,
-      pizzaPromise3
-    ])
   </script>
 </body>
 

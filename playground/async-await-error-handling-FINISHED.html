@@ -38,10 +38,10 @@
     }
 
     function handleDisgustingPizza() {
-
+      console.log('gross');
     }
     async function go() {
-      const pizza = await makePizza(['pineapple']).catch(handleDisgustingPizza);
+      const pizza = await makePizza(['pineapple']).catch(handleError);
       return pizza;
     }
 

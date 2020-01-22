@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async Await</title>
+</head>
+
+<body>
+  <script>
+    // const wait = (ms = 0) => new Promise(res => setTimeout(res, ms));
+
+    // async function go() {
+    //   console.log('starting');
+    //   await wait(2000);
+    //   console.log('ending');
+    // }
+    // go();
+
+    /*
+
+    //
+    // How to Declare Async Functions
+    //
+
+    // Basic Fn
+    async function functionDelcaration() {
+
+    }
+    // Arrow Fn
+    const asyncArrowFn = async () => {
+
+    }
+
+    // Callback
+    window.addEventListener('click', async function () {
+    });
+
+    // Method
+    const person = {
+      // Method Long
+      sayHello: async function () {
+
+      },
+      // Method Shorthand
+      async sayHi() {
+
+      },
+      // Propery Method
+      sayHey: async () => {
+
+      }
+    }
+
+    */
+
+    // async function makeDinner() {
+    //   const pizza1 = await makePizza(['pepperoni']);
+    //   console.log(pizza1);
+    // }
+
+    //
+    // Wait for the za's
+    //
+    async function makeDinner() {
+      const pizzaPromise1 = makePizza(['pepperoni']);
+      const pizzaPromise2 = makePizza(['mushrooms']);
+      const pizzas = await Promise.all([pizzaPromise1, pizzaPromise2]);
+      console.log(pizzas);
+    }
+
+
+  </script>
+</body>
+
+</html>

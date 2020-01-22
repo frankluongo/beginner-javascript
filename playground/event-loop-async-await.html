@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Event Loop</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <style>
+    .go {
+      margin: 5rem;
+      background: white;
+      padding: 5rem;
+      width: 25rem;
+      height: 25rem;
+      transition: all 0.2s;
+    }
+
+    .go.circle {
+      border-radius: 50%;
+    }
+
+    .go.red {
+      background: red;
+    }
+
+    .go.purple {
+      background: purple;
+      color: white;
+    }
+
+    .go.fadeOut {
+      opacity: 0;
+    }
+  </style>
+  <div class="go" data-ref="Go.btn">Click Me</div>
+  <script>
+    //
+    // Elements
+    //
+    const $$ = document.querySelector.bind(document);
+    const goBtn = $$('[data-ref="Go.btn"]');
+
+    //
+    // Listeners
+    //
+
+    goBtn.addEventListener('click', handleGoBtnClick);
+
+    //
+    // Actions
+    //
+
+    async function handleGoBtnClick({ currentTarget: btn }) {
+      btn.textContent = 'GO!';
+
+      await wait(2000)
+      btn.classList.add('circle');
+      await wait(500)
+      btn.classList.add('red');
+      await wait(250)
+      btn.classList.remove('circle')
+      await wait()
+      btn.classList.remove('red');
+      btn.classList.add('purple');
+      await wait(500)
+      btn.classList.add('fadeOut')
+      await wait(1000)
+      btn.classList.remove('fadeOut', 'purple');
+      console.log('You\'re in the awaiting land');
+    }
+
+
+    function wait(ms = 0) {
+      return new Promise(function (resolve) {
+        setTimeout(resolve, ms);
+      });
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>
