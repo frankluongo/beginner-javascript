@@ -406,17 +406,25 @@ do {
 
 ### 71: Async Await Error Handling
 
-- Resume at 5:38
+- Asynchronous functions return a promise
 
 ### 72: Async Await Prompt UI
 
+- Code in  `exercises/72 - Async Prompts/scripts.js`
+
 ### 73: Async Typer UI - 2 Options
+
+- Code in `exercises/73 - Async Typer/scripts.js`
 
 ## Module 13: AJAX & Fetching
 
 ### 74: Ajax & API's
 
+- Code in `playground/apis`
+
 ### 75: CORS & Recipes
+
+- Resume at 19:04
 
 ### 76: Dad Jokes
 
