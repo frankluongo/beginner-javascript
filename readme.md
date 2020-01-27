@@ -381,7 +381,6 @@ do {
 
 - `.call` will do the same things as bind but then also call the function
 
-
 #### .apply
 
 - The only difference between `.call` and `.apply` is that apply requires an array of arguments
@@ -410,7 +409,7 @@ do {
 
 ### 72: Async Await Prompt UI
 
-- Code in  `exercises/72 - Async Prompts/scripts.js`
+- Code in `exercises/72 - Async Prompts/scripts.js`
 
 ### 73: Async Typer UI - 2 Options
 
@@ -424,11 +423,15 @@ do {
 
 ### 75: CORS & Recipes
 
-- Resume at 19:04
+- Code in `exercises/75 - CORS and Recipes/scripts-fl.js`
 
 ### 76: Dad Jokes
 
+- Code in `exercises/76 - Dad Jokes/jokes.js`
+
 ### 77: Currency Converter
+
+- Resume at 10:10
 
 ## Module 14: ES Modules & Structuring Larger Apps
 
