@@ -1,6 +1,6 @@
-![](https://res.cloudinary.com/wesbos/image/upload/v1574876851/BJS/BJS-Social-Share.png)
-
 # Beginner JavaScript
+
+![Beginner JavaScript](https://res.cloudinary.com/wesbos/image/upload/v1574876851/BJS/BJS-Social-Share.png)
 
 These are the starter files and solutions to the [Beginner JavaScript](https://BeginnerJavaScript.com) course
 
@@ -431,13 +431,18 @@ do {
 
 ### 77: Currency Converter
 
-- Resume at 10:10
+- Code in `exercises/77 - Currency Converter/money.js`
 
 ## Module 14: ES Modules & Structuring Larger Apps
 
 ### 78: Modules
 
+- The VSCode Extension `Live Server` by Ritwick Dey will create a super simple Server for your project
+- You can also globally install `browsersync` and then use the `browsersync` command from the directory you're working in
+
 ### 79: Currency modules Refactor
+
+- Resume at 0:43
 
 ### 80: Dad Jokes Modules Refactor
 

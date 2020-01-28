@@ -1,4 +1,4 @@
-import 'babel-polyfill'
+// import 'babel-polyfill'
 
 const currencies = {
   USD: "United States Dollar",
