@@ -442,9 +442,11 @@ do {
 
 ### 79: Currency modules Refactor
 
-- Resume at 0:43
+- Code in `exercises/77 - Currency Converter - Modules`
 
 ### 80: Dad Jokes Modules Refactor
+
+- Code in `exercises/76 - Dad Jokes - Modules`
 
 ### 81: Bundling & Building with Parcel
 
