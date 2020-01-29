@@ -450,6 +450,16 @@ do {
 
 ### 81: Bundling & Building with Parcel
 
+Dealing with `regeneratorRuntime` issues:
+
+```json
+  "browserslist": [
+    "last 1 chrome versions"
+  ]
+```
+
+Resume at 8:09
+
 ### 82: Using Open Source NPM Packages
 
 ### 83: Security
