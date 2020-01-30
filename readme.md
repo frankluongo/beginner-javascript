@@ -458,14 +458,28 @@ Dealing with `regeneratorRuntime` issues:
   ]
 ```
 
-Resume at 8:09
+- Delete the `type="module"` from your script tag when using Parcel
 
 ### 82: Using Open Source NPM Packages
 
+- Use `Faker` to generate fake data for projects!
+
+```javascript
+import { name } from 'faker';
+
+console.log(`Hello, ${name.firstName()}`);
+```
+
 ### 83: Security
+
+- Don't store price or API keys on the client without validating on the server
+- Use a sanitizer like `dompurify` to keep HTML sane
+- Always send data to HTTPS
 
 ## Module 15: Final Round of Exercises
 
 ### 84: Web Speech Colours Game
+
+- Resume at 15:41
 
 ### 85: Audio Visualization
