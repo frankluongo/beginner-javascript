@@ -480,6 +480,6 @@ console.log(`Hello, ${name.firstName()}`);
 
 ### 84: Web Speech Colours Game
 
-- Resume at 15:41
+- Code in `exercises/84 - Web Speech Colour Game/speech.js`
 
 ### 85: Audio Visualization

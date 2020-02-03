@@ -37,8 +37,23 @@
 // colorsEl.innerHTML = displayColors(colorsByLength);
 
 import { handleResult } from "./modules/handlers"
+import { colorsByLength, isDark } from "./modules/colors";
+
+const colorsEl = document.querySelector('.colors');
 
 window.SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
+
+function displayColors(colors) {
+  return colors.map(color =>
+    `<span
+      style="background: ${color}"
+      class="color ${isDark(color) ? 'dark' : ''}"
+      data-ref="${color}"
+    >
+      ${color}
+    </span>`
+  ).join('')
+}
 
 function start() {
   if (!('SpeechRecognition' in window)) {
@@ -54,3 +69,4 @@ function start() {
 }
 
 start();
+colorsEl.innerHTML = displayColors(colorsByLength);
